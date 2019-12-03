@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <form method="post" name="form">
+            <p>
+                <select name="Ciudad">
+                    <option value="No">Selecciona una ciudad</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Cádiz">Cádiz</option>
+                </select><br>
+                <input type="submit" name="ok" value="Enviar">
+            </p>
+        </form>
+        <?php
+            //Esto muestra un desplegable con 3 opciones y te dice qué opción has seleccionado
+            if (isset($_POST["ok"])){
+                $respuesta=$_POST["Ciudad"];//Guarda lo que ponga en "value" de la opción marcado
+                if ($respuesta=="No"){
+                    echo "Debe seleccionar una ciudad";
+                }
+                else{ 
+                    echo "<p>La ciudad escogida es  $respuesta</p>";
+                }
+            }
+            // put your code here
+        ?>
+    </body>
+</html>
