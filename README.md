@@ -21,6 +21,7 @@ Practicas PHP
                 echo "<p>La opción escogida es  $respuesta</p>";
             }
             // put your code here
+            echo "Hola probando esto de las versiones";
         ?>
     </body>
 </html>
